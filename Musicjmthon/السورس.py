@@ -34,12 +34,12 @@ async def ping(client, m: Message):
     await m.delete()
     start = time()
     current_time = datetime.utcnow()
-    m_reply = await m.reply_text("⚡")
+    m_reply = await m.reply_text("😍")
     delta_ping = time() - start
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m_reply.edit(
-        f"<b>🏓 بـنـك/b> `{delta_ping * 1000:.3f} بالثانيه` \n<b>⏳ شغال</b> - `{uptime}`"
+        f"<b>😍‘  بـنـك/b> `{delta_ping * 1000:.3f} بالثانيه` \n<b>☁️‘ شغال</b> - `{uptime}`"
     )
 
 
@@ -57,7 +57,7 @@ async def restart(client, m: Message):
     await jmthon.edit("7")
     await jmthon.edit("8")
     await jmthon.edit("9")
-    await jmthon.edit("**تم اعادة تشغيل سورس جمثون ميوزك بنجاح ✓**")
+    await jmthon.edit("**تم اعادة تشغيل سورس ماتريكس ميوزك بنجاح ✓**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
@@ -78,7 +78,7 @@ async def help(client, m: Message):
 
 • {HNDLR}بنك - لعرض سرعه النت للبوت
 
-• {HNDLR}الاوامر - لعرض اوامر سورس ميوزك جمثون
+• {HNDLR}الاوامر - لعرض اوامر سورس ميوزك ماتريكس
 
 - أوامر المشرفين  : 
 • {HNDLR}استئناف - لمواصلة تشغيل المقطع الصوتي أو الفيديو المتوقف
@@ -98,13 +98,12 @@ async def repo(client, m: Message):
     REPZ = f"""
 <b>- مرحبا {m.from_user.mention}!
 
-🎶 هذا هو سورس جمثون ميوزك
+🎶 مرحبا بك في سورس ماتريكس
 
 🤖  اختصاص هذا البوت لتشغيل مقاطع صوتية او مقاطع الفيديو في المكالمات الصوتية
 
 ⚒️ لعرض اوامر السورس ارسل  {HNDLR}الاوامر
 
-📚 • قناة جمثون  : @jmthon
-• قناة جمثون ميوزك @jjmto</b>
+📚 • السابورت : @NiNJa_SuPPoORT
 """
     await m.reply(REPZ, disable_web_page_preview=True)
